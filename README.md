@@ -43,7 +43,7 @@ Our model aims to take the messages as input and try to predict these labels in 
     - Display the results and metrics
     - Save model
 3. Deployment 
-    - Create a web-app with Flask and Plotly, using Bootstrap templates.
+    - Create a web-app with Flask and Plotly, and using Bootstrap templates.
 
 It is also demonstrating NLP modeling with NLTK and scikit-learn.
 
@@ -56,7 +56,7 @@ There are 3 folders each one is related with the above steps;
         this folder contains run.py file which is running the web-app
         -templates: there are two templates
     - data:
-        this folder contains the ETL part files.
+        this folder contains the ETL pipeline files.
         - Input files: disaster_messages.csv and disaster_categories.csv
         - Clean and transform: process_data.py
         -Load data : Load data into a database DisasterResponse.db
@@ -107,6 +107,7 @@ There are 2 csv file one is for "messages" collected during disasters, the other
 **ML**
 - Load data from database.
 - Tokenize data with NLTK library
+
     **Model**
        
        - Build a pipeline:
