@@ -45,19 +45,24 @@ It is also demonstrating NLP modeling with NLTK and scikit-learn.
 ### File Descriptions <a name="files"></a>
 
 There are 3 folders each one is related with the above steps;
-    -app:
+
+    - app:
         this folder contains run.py file which is running the web-app
         -templates: there are two templates
-    -data:
+    - data:
         this folder contains the ETL part files.
-        - Input files: messages.csv and categories.csv
+        - Input files: disaster_messages.csv and disaster_categories.csv
         - Clean and transform: process_data.py
-        -Load data : Load data into a database disaster_response.db
-     -model:
+        -Load data : Load data into a database DisasterResponse.db
+     - model:
         this folder contains modelling part of the files
-        -modelling files: 
+        - train_classifier.py : the script that runs and trains the model
+        - classifier.pkl : Pickle file where the model is saved
+        
 
 ### How to run <a name="run"></a>
+
+If you want clone this repository and run the program:
 
 1. Run the following commands in the project's root directory to set up your database and model.
 
@@ -66,11 +71,9 @@ There are 3 folders each one is related with the above steps;
     - To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
-2. Go to `app` directory: `cd app`
+2. Go to `app` directory: `cd app` and Run your web app: `python run.py`
 
-3. Run your web app: `python run.py`
-
-4. Click the `PREVIEW` button to open the homepage
+3. Go to http://0.0.0.0:3000/
 
 ### Model <a name="model"></a>
 
