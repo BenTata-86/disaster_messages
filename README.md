@@ -97,7 +97,7 @@ graph1
 graph2
 ### ETL & ML Pipelines <a name="model"></a>
 **ETL**
-There are 2 csv file one is for messages collected during disasters, the other one is the categories that messages belong to, labeled by Appen.
+There are 2 csv file one is for "messages" collected during disasters, the other one is the "categories" that messages belong to, labeled by Appen.
 
 - Read csv files into dataframe.
 - Merge these 2 dataframes
@@ -113,12 +113,23 @@ There are 2 csv file one is for messages collected during disasters, the other o
             - Vectorize and transform using sklearn's CountVectorizer() and TfidfTransformer() functions
             - Uses Multioutput classifier, and estimator is RandomForestClassifier
             - Make a GridSearch for optimizing parameters.
-       -  
+       - Evaluate the model
+            
+            Using Classification report
+            
+       - Save model into a pickle file.
+ The data is unbalanced so it is hard to get  good results for some categories. 
+ 
+ As an example there is a category for child_alone, but no message is labelled into this category.
+ 
+ The aim of this project is to demonstrate an end-to-end Data Science process, so there is a way to go on data cleaning and modelling.
+    - Get much more data for all labels
+    - Use pre-trained deep learning models ..etc
  
 
 
 
 ### Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
-Must give credit to Inside Airbnb for the data.  You can find the Licensing for the data and other descriptive information at the inside airbnb site available [here](http://insideairbnb.com/get-the-data.html).  Otherwise, feel free to use the code here as you would like! 
+Must give credit to Appen for the data, and templates for Udacity.
 
