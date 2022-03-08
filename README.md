@@ -22,19 +22,40 @@ Data is originated from Appen.**
 
 
 ### Project Motivation<a name="motivation"></a>
-This projects aims to demonstrate almost(except monitoring) all cycles in Data Science project.
+This projects aims to demonstrate almost(except monitoring) all steps in Data Science project.
 
 1. ETL
 
-    - Extract data : extract data
-    - Transform data : clean data
-    - Load data : Load to a SQL database
+    - Extract data : Input data from Appen
+    - Transform data : clean  and transfor data
+    - Load data : Load data to a SQL database
 2. Modelling
-3. Deployment
+    - Initializing the data
+    - Vectorization and transfromation of the texts
+    - Build model
+    - Train model
+    - Display the results and metrics
+    - Save model
+3. Deployment 
+    -Create a web-app with Flask and Plotly
+
 It is also demonstrating NLP modeling with NLTK and scikit-learn.
 
 
 ### File Descriptions <a name="files"></a>
+
+There are 3 folders each one is related with the above steps;
+    -app:
+        this folder contains run.py file which is running the web-app
+        -templates: there are two templates
+    -data:
+        this folder contains the ETL part files.
+        - Input files: messages.csv and categories.csv
+        - Clean and transform: process_data.py
+        -Load data : Load data into a database disaster_response.db
+     -model:
+        this folder contains modelling part of the files
+        -modelling files: 
 
 ### How to run <a name="run"></a>
 
