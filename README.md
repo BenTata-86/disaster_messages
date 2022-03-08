@@ -1,6 +1,6 @@
 # Disaster Response Pipeline Project
-**This repository shows how to create a web-app, to classify disaster messages.
-Data is originated from Appen.**
+**This repository shows how to create a web-app to classify disaster messages.
+Data is collected and labeled by Appen.**
 
 ### Table of Contents
 
@@ -8,7 +8,7 @@ Data is originated from Appen.**
 2. [Project Motivation](#motivation)
 3. [File Descriptions](#files)
 4. [How to run](#run)
-5. [Model](#model)
+5. [ETL & ML Pipelines](#model)
 6. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ### Installation <a name="installation"></a>
@@ -22,10 +22,16 @@ Data is originated from Appen.**
 
 
 ### Project Motivation<a name="motivation"></a>
-This projects aims to demonstrate almost(except monitoring) all steps in Data Science project.
+This projects aims to demonstrate almost(except monitoring) all steps in a Data Science project.
+The data is collected and labeled by Figure Eight(now Appen). The transformed data consist of messages collected via 3 genres;
+    - Direct
+    - Social Media
+    - News
+    
+The messages labelled into 36 categories by Appen.
+Our model aims to take the messages as input and try to predict these labels in order send or warn authorities.
 
 1. ETL
-
     - Extract data : Input data from Appen
     - Transform data : clean  and transfor data
     - Load data : Load data to a SQL database
@@ -37,7 +43,7 @@ This projects aims to demonstrate almost(except monitoring) all steps in Data Sc
     - Display the results and metrics
     - Save model
 3. Deployment 
-    -Create a web-app with Flask and Plotly
+    - Create a web-app with Flask and Plotly, using Bootstrap templates.
 
 It is also demonstrating NLP modeling with NLTK and scikit-learn.
 
@@ -75,8 +81,40 @@ If you want clone this repository and run the program:
 
 3. Go to http://0.0.0.0:3000/
 
-### Model <a name="model"></a>
+Nav panel:
+png.nav
+You can use navigation panel for refreshing page after query, go to Udacity or this repository.
 
+Enter a message to classify
+png.message bar
+
+png.results
+
+graphs
+
+graph1
+
+graph2
+### ETL & ML Pipelines <a name="model"></a>
+**ETL**
+There are 2 csv file one is for messages collected during disasters, the other one is the categories that messages belong to, labeled by Appen.
+
+- Read csv files into dataframe.
+- Merge these 2 dataframes
+- Clean and process data for ML algorithms
+- Load data into a database using SQLalchemy.
+
+**ML**
+- Load data from database.
+- Tokenize data with NLTK library
+    **Model**
+       
+       - Build a pipeline:
+            - Vectorize and transform using sklearn's CountVectorizer() and TfidfTransformer() functions
+            - Uses Multioutput classifier, and estimator is RandomForestClassifier
+            - Make a GridSearch for optimizing parameters.
+       -  
+ 
 
 
 
