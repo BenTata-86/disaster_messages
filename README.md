@@ -29,7 +29,7 @@ This projects aims to demonstrate almost(except monitoring) all steps in Data Sc
     - Extract data : Input data from Appen
     - Transform data : clean  and transfor data
     - Load data : Load data to a SQL database
-2. Modelling
+2. ML Pipeline
     - Initializing the data
     - Vectorization and transfromation of the texts
     - Build model
