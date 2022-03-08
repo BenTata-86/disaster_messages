@@ -8,7 +8,7 @@ Data is originated from Appen.**
 2. [Project Motivation](#motivation)
 3. [File Descriptions](#files)
 4. [How to run](#results)
-5. [the Model](#model)
+5. [Model](#model)
 6. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ### Installation <a name="installation"></a>
@@ -36,7 +36,7 @@ There is no need to run additional packages or libraries to install under the An
 
 4. Click the `PREVIEW` button to open the homepage
 
-### the Model
+### Model
 
 
 
