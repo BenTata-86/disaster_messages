@@ -7,26 +7,36 @@ Data is originated from Appen.**
 1. [Installation](#installation)
 2. [Project Motivation](#motivation)
 3. [File Descriptions](#files)
-4. [How to run](#results)
+4. [How to run](#run)
 5. [Model](#model)
 6. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ### Installation <a name="installation"></a>
-Python 3.6
-ML Libraries: NumPy, Pandas, Sciki-Learn
-NLP Libraries: NLTK
-SQLlite Database Libraqries: SQLalchemy
-Model Loading and Saving Library: Pickle
-Web App and Data Visualization: Flask, Plotly
+- Python 3.8+
+- ML Libraries: NumPy, Pandas, Sciki-Learn
+- NLP Libraries: NLTK
+- SQLlite Database Libraqries: SQLalchemy
+- Model Loading and Saving Library: Pickle
+- Web App and Data Visualization: Flask, Plotly
+- Additional: Bootstrap for styling, HTML for templates
 
 
 ### Project Motivation<a name="motivation"></a>
+This projects aims to demonstrate almost(except monitoring) all cycles in Data Science project.
 
+1. ETL
+
+    - Extract data : extract data
+    - Transform data : clean data
+    - Load data : Load to a SQL database
+2. Modelling
+3. Deployment
+It is also demonstrating NLP modeling with NLTK and scikit-learn.
 
 
 ### File Descriptions <a name="files"></a>
 
-### How to run
+### How to run <a name="run"></a>
 
 1. Run the following commands in the project's root directory to set up your database and model.
 
@@ -41,7 +51,7 @@ Web App and Data Visualization: Flask, Plotly
 
 4. Click the `PREVIEW` button to open the homepage
 
-### Model
+### Model <a name="model"></a>
 
 
 
