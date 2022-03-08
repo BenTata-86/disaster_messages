@@ -12,7 +12,12 @@ Data is originated from Appen.**
 6. [Licensing, Authors, and Acknowledgements](#licensing)
 
 ### Installation <a name="installation"></a>
-There is no need to run additional packages or libraries to install under the Anaconda Python distribution.
+Python 3.6
+ML Libraries: NumPy, Pandas, Sciki-Learn
+NLP Libraries: NLTK
+SQLlite Database Libraqries: SQLalchemy
+Model Loading and Saving Library: Pickle
+Web App and Data Visualization: Flask, Plotly
 
 
 ### Project Motivation<a name="motivation"></a>
