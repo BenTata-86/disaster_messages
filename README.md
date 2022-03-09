@@ -1,6 +1,7 @@
 # Disaster Response Pipeline Project
-**This repository shows how to create a web-app to classify disaster messages.
-Data is collected and labeled by Appen.**
+**This repository demonstrates an NLP modelling with a web-app ,of messages collected during disasters.
+Data is collected and labeled by Appen. There are almost 26K messages collected and labelled in this dataset.
+We try to predict 36 labels and show the results in a web-app**
 
 ### Table of Contents
 
@@ -22,14 +23,14 @@ Data is collected and labeled by Appen.**
 
 
 ### Project Motivation<a name="motivation"></a>
-This projects aims to demonstrate almost(except monitoring) all steps in a Data Science project.
-The data is collected and labeled by Figure Eight(now Appen). The transformed data consist of messages collected via 3 genres;
+This projects aims to demonstrate (except monitoring) all steps in a Data Science project.
+The data is collected and labeled by Figure Eight(now Appen). The data consist of messages collected via 3 genres;
     - Direct
     - Social Media
     - News
     
 The messages labelled into 36 categories by Appen.
-Our model aims to take the messages as input and try to predict these labels in order send or warn authorities.
+Our model aims to take the messages as input and try to predict these labels in order to send or warn authorities.
 
 1. ETL
     - Extract data : Input data from Appen
@@ -68,7 +69,7 @@ There are 3 folders each one is related with the above steps;
 
 ### How to run <a name="run"></a>
 
-If you want clone this repository and run the program:
+If you want to clone this repository and run the program:
 
 1. Run the following commands in the project's root directory to set up your database and model.
 
@@ -81,20 +82,26 @@ If you want clone this repository and run the program:
 
 3. Go to http://0.0.0.0:3000/
 
-Nav panel:
-png.nav
+- Nav panel & Message query:
+![image](https://user-images.githubusercontent.com/85060022/157391053-0a674e54-0270-4c6c-aebe-1a15a580a980.png)
+
 You can use navigation panel for refreshing page after query, go to Udacity or this repository.
 
-Enter a message to classify
-png.message bar
+You can enter a message to classify. You can see the message as an example and how the model predicted labels of this messages.
+![image](https://user-images.githubusercontent.com/85060022/157391260-b1071b07-5e56-4405-a3b0-d6c8074fec26.png)
 
-png.results
+![image](https://user-images.githubusercontent.com/85060022/157391330-726853e1-3523-4145-b05c-7ab9ded78dd1.png)
 
-graphs
 
-graph1
+- Graphs:
+    The first graph shows the distributions of the sources.
+![image](https://user-images.githubusercontent.com/85060022/157391758-ede21116-9cb8-437a-9f79-1c30add6f5e1.png)
 
-graph2
+    Second graph  shows the distribution of the labels. How these messages labelled by Appen.
+![image](https://user-images.githubusercontent.com/85060022/157391899-b6332cc7-76de-4e9b-9c78-8a60a76895d6.png)
+
+
+
 ### ETL & ML Pipelines <a name="model"></a>
 **ETL**
 There are 2 csv file one is for "messages" collected during disasters, the other one is the "categories" that messages belong to, labeled by Appen.
