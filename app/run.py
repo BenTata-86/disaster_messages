@@ -38,24 +38,33 @@ model = joblib.load("../models/classifier.pkl")
 @app.route('/index')
 def index():
     
-    # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
+    # extract data needed for visuals- genre numbers
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    #Label numbers
+    category_names = df.iloc[:,4:].sum().sort_values(ascending=True).index
+  
+    category_counts = (df.iloc[:,4:] != 0).sum().sort_values(ascending=True).values
+    
     # create visuals
-    # TODO: Below is an example - modify to create your own visuals
+
     graphs = [
         {
             'data': [
                 Bar(
                     x=genre_names,
-                    y=genre_counts
+                    y=genre_counts, 
+           
                 )
             ],
 
             'layout': {
-                'title': 'Distribution of Message Genres',
+                'title': {
+                    "text": "<b>What is the source of the messages?"
+                    "</b><br>Message Genres"
+                },                          
+                          
                 'yaxis': {
                     'title': "Count"
                 },
@@ -63,12 +72,47 @@ def index():
                     'title': "Genre"
                 }
             }
+        },
+        
+        {
+            'data': [
+                Bar(
+                    y=list(category_names),
+                    x=list(category_counts),
+                    orientation="h"
+                )
+            ],
+            'layout': {
+                'title': {
+                    "text": "<b>What are the messages?</b>"
+                    
+                },
+                
+                'xaxis': {
+                    'title': "Count"
+                },
+               
+               "margin": {
+                    "pad": 10,
+                    "l": 140,
+                    "r": 40,
+                    "t": 80,
+                    "b": 40,
+            },
+                "hoverlabel": {
+                    "font_size": 18,
+                    "font_family": "Roboto",
+            },
+                "yaxis": {"dtick": 1},
+            }
         }
     ]
     
     # encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
     graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
+    
+    
     
     # render web page with plotly graphs
     return render_template('master.html', ids=ids, graphJSON=graphJSON)
